@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
-@theme inline {
+@theme  {
   
   --font-poppins: var(--font-poppins);
+  --breakpoint-nwsm:25rem;
+  --breakpoint--bg:125rem;
   
 }
 

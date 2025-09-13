@@ -39,7 +39,7 @@ const Nav = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setShowLinks(false); // only close mobile menu, not dropdown
+        setShowLinks(false); 
       }
     };
 
