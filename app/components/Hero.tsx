@@ -5,13 +5,13 @@ const Hero = () => {
   return (
     <>
       <section className='bg-[#D7F5DC]'>
-        <div className='bg-[#D7F5DC] mx-auto   px-4 md:px-8 lg:px-10 xl:px-20 2xl:px-32 flex flex-col lg:flex-row items-center justify-center bg:justify-evenly gap-[16px]'>
-          <div className='mt-[5rem] lg:mt-[9rem]'>
+        <div className='   px-4 md:px-8 lg:px-10 xl:px-20 2xl:px-32 flex flex-col lg:flex-row items-center justify-start   gap-[16px]  mx-auto lg:justify-between'>
+          <div className='mt-[5rem] lg:mt-[9rem] '>
             <div className=' flex flex-col gap-[10px] items-start justify-start'>
-              <h2 className='font-poppins font-bold text-black text-[22px] nwsm:text-[30px] leading-[30px] lg:leading-[50px] max-w-[550px] md:max-w-max lg:max-w-[550px] lg:text-[40px] xl:text-[50px] xl:leading-[65px]'>
+              <h2 className='font-poppins font-bold text-black text-[22px] nwsm:text-[30px] leading-[30px] lg:leading-[50px]  max-w-[550px] md:max-w-max lg:max-w-[550px] lg:text-[40px] xl:text-[50px] mg:text-[60px] xl:leading-[65px] mg:max-w-[800px]'>
                 Increase Your Customers Loyalty and Satisfaction
               </h2>
-              <p className='text-black text-[16px] md:text-[20px] font-normal md:font-medium max-w-[472px] md:max-w-max lg:max-w-[472px]'>
+              <p className='text-black text-[16px] md:text-[20px] font-normal md:font-medium max-w-[472px] md:max-w-max lg:max-w-[472px] mg:max-w-[720px]'>
                 We help businesses like yours earn more customers, standout from
                 competitors, make more money
               </p>

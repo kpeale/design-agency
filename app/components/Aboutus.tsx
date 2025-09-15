@@ -25,7 +25,7 @@ const Aboutus = () => {
                 alt='image'
               />
             </div>
-            <div className='flex flex-col mx-auto items-center justify-center lg:items-start lg:justify-start'>
+            <div className='flex flex-col  items-center justify-center lg:items-start lg:justify-start'>
               <p className='text-black font-poppins lg:text-xl xl:text-2xl font-semibold'>
                 Grow Your Business
               </p>
@@ -62,7 +62,7 @@ const Aboutus = () => {
                 alt='image'
               />
             </div>
-            <div className='flex flex-col mx-auto items-center justify-center lg:items-start lg:justify-start'>
+            <div className='flex flex-col  items-center justify-center lg:items-start lg:justify-start'>
               <p className='text-black font-poppins lg:text-xl xl:text-2xl font-semibold'>
                 Improve brand loyalty
               </p>
@@ -99,7 +99,7 @@ const Aboutus = () => {
                 alt='image'
               />
             </div>
-            <div className='flex flex-col mx-auto items-center justify-center lg:items-start lg:justify-start'>
+            <div className='flex flex-col  items-center justify-center lg:items-start lg:justify-start'>
               <p className='text-black font-poppins lg:text-xl xl:text-2xl font-semibold '>
                 Improve Business Model
               </p>
