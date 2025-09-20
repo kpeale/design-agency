@@ -4,6 +4,8 @@ import Aboutus from './components/Aboutus';
 import Rating from './components/Rating';
 import Portfolio from './components/Portfolio';
 import Testimonial from './components/Testimonial';
+import NewsLetter from './components/Newsletter';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Rating />
       <Portfolio />
       <Testimonial />
+      <NewsLetter />
+      <Footer />
     </>
   );
 }

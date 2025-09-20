@@ -94,96 +94,102 @@ const Testimonial = () => {
 
   useEffect(() => {
     if (direction) {
-      const timer = setTimeout(() => setDirection(null), 600); // reset after 600ms
+      const timer = setTimeout(() => setDirection(null), 600);
       return () => clearTimeout(timer);
     }
   }, [direction]);
 
   return (
-    <section className='bg-white mt-[3rem] md:mt-[5rem] lg:mt-[7rem] px-0 lg:px-10 xl:px-20 2xl:px-32'>
-      <div className='flex flex-col lg:flex-row items-center justify-center lg:justify-between '>
-        <div className='flex flex-col items-center justify-center lg:items-start lg:justify-start'>
-          <p className='text-[#20B15A] font-poppins font-medium text-[20px]'>
-            TESTIMONIALS
-          </p>
-          <div className='mt-[15px]  max-w-[400px]'>
-            <p className='text-black font-poppins text-center lg:text-start text-[20px] lg:text-[30px] font-semibold'>
-              See What Our Customer Say About Us
+    <section className='bg-white mt-[3rem] md:mt-[5rem] lg:mt-[7rem] w-full'>
+      <div className='  px-0 lg:px-10 xl:px-20 2xl:container 2xl:mx-auto'>
+        <div className='flex flex-col lg:flex-row items-center justify-center lg:justify-between '>
+          <div className='flex flex-col items-center justify-center lg:items-start lg:justify-start'>
+            <p className='text-[#20B15A] font-poppins font-medium text-[20px]'>
+              TESTIMONIALS
             </p>
+            <div className='mt-[15px]  max-w-[400px]'>
+              <p className='text-black font-poppins text-center lg:text-start text-[20px] lg:text-[30px] font-semibold'>
+                See What Our Customer Say About Us
+              </p>
+            </div>
+          </div>
+
+          <div className='flex flex-row items-center justify-center lg:items-start lg:justify-start gap-[21px] mt-[3rem] lg:mt-0'>
+            <button
+              aria-label='Previous'
+              onClick={handlePrevious}
+              className='w-20 h-20 p-5 border-[1px] border-black rounded-full flex items-center justify-center cursor-pointer'
+              style={{
+                backgroundColor:
+                  direction === 'prev' ? '#D7F5DC' : 'transparent',
+              }}
+            >
+              <Image
+                src='/images/sliderArrow-left.png'
+                width={14.36}
+                height={24.94}
+                alt='arrow'
+              />
+            </button>
+
+            <button
+              aria-label='Next'
+              onClick={handleNext}
+              className='w-20 h-20 p-5 border-[1px] border-black rounded-full flex items-center justify-center cursor-pointer'
+              style={{
+                backgroundColor:
+                  direction === 'next' ? '#D7F5DC' : 'transparent',
+              }}
+            >
+              <Image
+                src='/images/sliderArrow-right.png'
+                width={14.36}
+                height={24.94}
+                alt='arrow'
+              />
+            </button>
           </div>
         </div>
 
-        <div className='flex flex-row items-center justify-center lg:items-start lg:justify-start gap-[21px]'>
-          <button
-            aria-label='Previous'
-            onClick={handlePrevious}
-            className='w-20 h-20 p-5 border-[1px] border-black rounded-full flex items-center justify-center'
+        <div className='overflow-hidden mt-[3rem] lg:mt-[6rem]'>
+          <div
+            className='flex transition-transform duration-300 ease-in-out mx-auto lg:mx-0  '
             style={{
-              backgroundColor: direction === 'prev' ? '#20B15A' : 'transparent',
+              transform: `translateX(-${
+                currentIndex * (100 / visibleSlides)
+              }%)`,
+              width: `${(testimonials.length / visibleSlides) * 100}%`,
             }}
           >
-            <Image
-              src='/images/sliderArrow-left.png'
-              width={14.36}
-              height={24.94}
-              alt='arrow'
-            />
-          </button>
-
-          <button
-            aria-label='Next'
-            onClick={handleNext}
-            className='w-20 h-20 p-5 border-[1px] border-black rounded-full flex items-center justify-center'
-            style={{
-              backgroundColor: direction === 'next' ? '#20B15A' : 'transparent',
-            }}
-          >
-            <Image
-              src='/images/sliderArrow-right.png'
-              width={14.36}
-              height={24.94}
-              alt='arrow'
-            />
-          </button>
-        </div>
-      </div>
-
-      <div className='overflow-hidden'>
-        <div
-          className='flex transition-transform duration-300 ease-in-out mx-auto lg:mx-0  '
-          style={{
-            transform: `translateX(-${currentIndex * (100 / visibleSlides)}%)`,
-            width: `${(testimonials.length / visibleSlides) * 100}%`,
-          }}
-        >
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.name}
-              className='  w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 p-2 items-center justify-center mx-auto lg:justify-center lg:items-start lg:mx-0'
-            >
-              <div className='shadow-xl p-6 rounded-2xl'>
-                <p className='text-lg max-w-[280px] hsm:max-w-[320px] nwsm:max-w-[350px] gsm:max-w-[450px] md:max-w-max text-black font-poppins leading-[25px]'>
-                  {testimonial.text}
-                </p>
-                <div className='mt-4 flex gap-3 items-center'>
-                  <Image
-                    src={testimonial.image}
-                    width={60}
-                    height={60}
-                    alt='avatar'
-                  />
-                  <div className='flex flex-col gap-[5px]'>
-                    <p className='text-[20px] font-poppins text-black leading-[25px] font-semibold'>
-                      {testimonial.name}
-                    </p>
-                    <p className='text-black font-poppins text-lg leading-[25px]'>
-                      {testimonial.title}
-                    </p>
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.name}
+                className='  w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 p-2 items-center justify-center mx-auto lg:justify-center lg:items-start lg:mx-0'
+              >
+                <div className='shadow-xl p-6 rounded-2xl'>
+                  <p className='text-lg max-w-[280px] hsm:max-w-[320px] nwsm:max-w-[350px] gsm:max-w-[450px] md:max-w-max text-black font-poppins leading-[25px]'>
+                    {testimonial.text}
+                  </p>
+                  <div className='mt-4 flex gap-3 items-center'>
+                    <Image
+                      src={testimonial.image}
+                      width={60}
+                      height={60}
+                      alt='avatar'
+                    />
+                    <div className='flex flex-col gap-[5px]'>
+                      <p className='text-[20px] font-poppins text-black leading-[25px] font-semibold'>
+                        {testimonial.name}
+                      </p>
+                      <p className='text-black font-poppins text-lg leading-[25px]'>
+                        {testimonial.title}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

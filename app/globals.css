@@ -4,10 +4,10 @@
   
   --font-poppins: var(--font-poppins);
   --breakpoint-hsm:23.4375rem;
-  --breakpoint-nwsm:25rem;
-    --breakpoint-mg:118.75rem;
-  --breakpoint-bg:125rem;
+  --breakpoint-nwsm:25rem;    
   --breakpoint-gsm:31.25rem;
+  --breakpoint-mg:118.75rem;
+  --breakpoint-bg:125rem;
   
 }
 
