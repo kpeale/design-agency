@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
           <div className=' mt-[2rem] lg:mt-[6rem] flex flex-col items-start justify-start lg:items-start lg:justify-start lg:pb-[29px]'>
             <p className='text-black font-poppins font-medium text-[20px]'>
-              Copyright Design Agency 2022
+              Copyright Design Agency 2025
             </p>
           </div>
         </div>
