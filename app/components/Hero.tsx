@@ -18,7 +18,7 @@ const Hero = () => {
             </div>
 
             <div className='mt-[37px] flex justify-start items-start lg:pb-[1rem] xl:mb-0'>
-              <button className='bg-[#20B15A] text-white rounded-[16px] px-[30px] py-[20px]  font-poppins font-medium text-[20px]'>
+              <button className='bg-[#20B15A] text-white rounded-[16px] px-[15px] lg:px-[30px] py-4 lg:py-[20px]  font-poppins font-medium text-sm lg:text-[20px]'>
                 Get Started
               </button>
             </div>
